@@ -1,6 +1,6 @@
 #coding:utf-8
 
-"""将用户输入的值通过MD5加密后显示在界面上。未完待续..."""
+"""将用户输入的值通过MD5加密后显示在界面上。未完待续...2016-7-29"""
 import wx
 import hashlib
 class TextFrame(wx.Frame):
