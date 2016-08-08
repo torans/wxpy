@@ -1,2 +1,2 @@
-# Wxpython
-用wxpython GUI设计案例。
+# Python学习笔记片段
+本仓库记录本人学习python过程中整理的零碎笔记。
