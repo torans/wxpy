@@ -11,3 +11,7 @@ content_list = obj.findAll('div',{'class':'zm-editable-content clearfix'})
 for i in content_list:
     content = i.get_text()
     print tt,desc,content
+
+
+
+
