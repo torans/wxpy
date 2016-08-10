@@ -6,7 +6,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-data = xlrd.open_workbook('d://test.xlsx')
+data = xlrd.open_workbook('h://bigdata/data/test.xlsx')
 table = data.sheets()[0]
 nrows = table.nrows
 hotwords = {}
@@ -16,18 +16,12 @@ for i in range(1,nrows):
     job = jieba.cut(table.col(1)[i].value,cut_all=True)
     for x in job:
         #print x
-        f = open('d://hotwords.txt','a+')
-        lines = f.readlines()
-        for i in lines:
-            line = i
-        if x in line:
-            count = count + 1
-            f.write(x+str(count))
+        if x !='':
+            f = open('h://bigdata/data/gy581.txt','a+')
+            f.write(x)
             f.write('\n')
-            print u'该关键词已出现过，累加中...  :' + x
+            print u'写入：' + x
+            f.close()
         else:
-            f.write(x+str(count))
-            f.write('\n')
-            print u'新词：' + x
-
+            print u'关键词为空'
 
